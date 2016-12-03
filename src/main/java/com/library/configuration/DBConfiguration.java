@@ -1,7 +1,5 @@
 package com.library.configuration;
 
-import java.net.UnknownHostException;
-
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,15 +15,15 @@ public class DBConfiguration {
 	@Bean
 	@Scope(scopeName=ConfigurableBeanFactory.SCOPE_SINGLETON)
 	public DB getDB() {
-		String uri = "mongodb://sushclient:client55@127.0.0.1:27017/";
-		MongoClient mongoClient = null;
-		try {
-			mongoClient = new MongoClient(new MongoClientURI(uri));
-		} catch (UnknownHostException e) {
-			System.out.println("********************Exception Occured************************");
-			e.printStackTrace();
+		MongoClient mongo = null;
+		DB db = null;
+		String uri ="mongodb://sushclient:client55@127.0.0.1:27018/?authSource=sampledb&authMechanism=SCRAM-SHA-1";
+		try{
+			mongo = new MongoClient(new MongoClientURI(uri));
+		}catch(Exception e) {
+			mongo.close();
 		}
-		DB db = mongoClient.getDB("sampledb");
+		db = mongo.getDB("sampledb");
 		return db;
 	}
 }
