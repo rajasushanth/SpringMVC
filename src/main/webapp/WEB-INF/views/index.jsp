@@ -8,7 +8,7 @@
 </head>
 <h2>Welcome to index page</h2>
 <body>
-<form action="/Library/homepage">
+<form action="/SpringMVC/homepage">
 <input type="submit"/>
 </form>
 

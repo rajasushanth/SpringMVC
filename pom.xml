@@ -108,6 +108,10 @@
 			<scope>test</scope>
 		</dependency>
 
-	</dependencies>	
+	</dependencies>
+	
+	<build>
+    	<finalName>SpringMVC</finalName>
+  	</build>	
 	
 </project>

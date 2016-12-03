@@ -11,7 +11,7 @@
 
 <P>  Controller message: ${msg} </P>
 
-<form action="/Library/">
+<form action="/SpringMVC/">
 <input type="submit" value="Back"/>
 </form>
 </body>
