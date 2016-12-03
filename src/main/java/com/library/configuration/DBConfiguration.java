@@ -17,7 +17,7 @@ public class DBConfiguration {
 	public DB getDB() {
 		MongoClient mongo = null;
 		DB db = null;
-		String uri ="mongodb://sushclient:client55@127.0.0.1:27017/?authSource=sampledb&authMechanism=SCRAM-SHA-1";
+		String uri ="mongodb://sushclient:client55@localhost:27018/?authSource=sampledb&authMechanism=SCRAM-SHA-1";
 		try{
 			mongo = new MongoClient(new MongoClientURI(uri));
 		}catch(Exception e) {
