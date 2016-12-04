@@ -24,8 +24,6 @@
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 
-		<!-- Test -->
-		<junit.version>4.11</junit.version>
 
 	</properties>
 	
@@ -37,7 +35,7 @@
         	<version>${spring-framework.version}</version>
     	</dependency>
     	
-    	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    	<!-- Gson -->
 		<dependency>
     		<groupId>com.google.code.gson</groupId>
     		<artifactId>gson</artifactId>
@@ -91,21 +89,6 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
 			<scope>compile</scope>
-		</dependency>
-
-		
-		<!-- Test Artifacts -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring-framework.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
