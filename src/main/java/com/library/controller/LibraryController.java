@@ -18,7 +18,7 @@ import com.mongodb.client.MongoDatabase;
 @RestController
 public class LibraryController {
 	
-	@Autowired(required=false)
+	@Autowired
 	private MongoDatabase database;
 	
 	private final String producerType = "application/json";
@@ -37,7 +37,7 @@ public class LibraryController {
 				   booklist.add(gson.fromJson(document.toJson() , Books.class));
 			   }
 		} catch (Exception e) {
-			System.out.println("Exception while parsing to GSON");
+			System.out.println("Exception in LibraryController:: "+e.getMessage());
 		}
 		
 		return booklist;

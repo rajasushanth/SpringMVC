@@ -36,6 +36,7 @@ public class DBConfiguration {
 		try{
 			mongoClient = new MongoClient(new MongoClientURI(uri));
 		}catch(Exception e) {
+			System.out.println("Exception in DBConfiguration::"+e.getMessage());
 			mongoClient.close();
 		}
 		database = mongoClient.getDatabase(System.getenv("MONGODB_DATABASE"));
